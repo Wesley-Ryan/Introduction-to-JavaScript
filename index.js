@@ -131,13 +131,19 @@ feedingRequirements(1,15)
       let choices = ["rock", "paper", "sissors"]
       let computerChoice = choices[[Math.floor(Math.random() * choices.length)]]
       let userChoice = choices[num]
-      //console.log(choices[computerChoice])
-      //console.log(choices[num])
-     switch(userChoice, computerChoice) { 
-         case userChoice === computerChoice:
-             console.log(`It's a tie, you both chose ${userChoice}`)
-             break
-        
+    
+     
+
+      //game rules and comparisons
+     if (userChoice === "rock" && computerChoice === "sissors" || userChoice === "paper" && computerChoice === "rock" || userChoice === "sissors" && computerChoice === "paper"){ 
+
+         console.log(`You won!!! Good thing you chose ${userChoice}! `)
+
+
+     } else if (userChoice === "rock" && computerChoice === "paper" || userChoice === "paper" && computerChoice === "sissors" || userChoice === "sissors" && computerChoice === "rock") { 
+        console.log(`You Lost!!! Too bad you chose ${userChoice}! )`)
+     } else { 
+            console.log(`It's a tie!!! You both chose ${userChoice}`)
      }
 
 
