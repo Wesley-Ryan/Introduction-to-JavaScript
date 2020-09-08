@@ -148,6 +148,11 @@ feedingRequirements(1,15)
 
 
   }
+
+  // Enter a number 0-2 to select your choice. 
+  // 0: Rock
+  // 1: Paper
+  // 2: Sissors
   
 rockPaperSissors(2)
 
@@ -157,15 +162,25 @@ rockPaperSissors(2)
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
-
+function metricConverter(num) { 
+    let miles = num * 0.62137
+    miles = Math.round(miles * 100) / 100 // stoping number at 2 decimal places
+    console.log(`${num}km is exactly ${miles} miles.`)
+}
+metricConverter(5)
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+function feetToCm(num) { 
+    let cm = num * 30.48
 
+    cm = Math.round(cm * 100) / 100 // stoping number at 2 decimal places
 
+    console.log(`${num} is exactly ${cm} centimeters.`)
+}
 
+feetToCm(3)
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
