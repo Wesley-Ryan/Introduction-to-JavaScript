@@ -208,6 +208,22 @@ annoyingSong(4)
 //and anything below 60 should be F
   
 
+function gradeCalculator(num){
+    if (num >= 60 && num <= 69){
+        grade = "D. Not your best work..."
+    }else if (num >= 70 && num <= 79){
+        grade = "C. Doing ok."
+    }else if (num >= 80 && num <= 89){
+        grade = "B. Nice Work!"
+    }else if (num >= 90){
+        grade = "A. Great Job!"
+    } else { 
+        grade = "F. Better luck next time..."
+    }
+}
+  gradeCalculator(50);
+
+  console.log(`You have recieved a ${grade}`);
   
   
 
