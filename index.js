@@ -69,24 +69,19 @@ if (age >= 1 && weight <= 5) {
     result = 3 /100 * weight
     console.log(`Your dog needs ${result} pounds of Dog Food.`)
 
-} else if (age < 1 && weight <= 5) { 
+} else if (age <= 0.4) { 
+    result = 10 /100 * weight
+    console.log(`Your puppy needs ${result} pounds of Dog Food.`)
+
+} else if (age > 0.4 && age < 0.7) { 
     result = 5 /100 * weight
     console.log(`Your puppy needs ${result} pounds of Dog Food.`)
 
-} else if (age < 1 && weight > 5 && weight <= 10) { 
+} else(age > 0.7 && age < 1 ) { 
     result = 4 /100 * weight
     console.log(`Your puppy needs ${result} pounds of Dog Food.`)
 
-} else if (age < 1 && weight > 10 && weight <= 15) { 
-    result = 3 /100 * weight
-    console.log(`Your puppy needs ${result} pounds of Dog Food.`)
-
-} else { 
-    result = 2 /100 * weight
-    console.log(`Your puppy needs ${result} pounds of Dog Food.`)
-
-}
-
+} 
 }
 feedingRequirements(2,14)
 feedingRequirements(0,20)
@@ -211,11 +206,11 @@ annoyingSong(4)
 function gradeCalculator(num){
     if (num >= 60 && num <= 69){
         grade = "D. Not your best work..."
-    }else if (num >= 70 && num <= 79){
+    } else if (num >= 70 && num <= 79){
         grade = "C. Doing ok."
-    }else if (num >= 80 && num <= 89){
+    } else if (num >= 80 && num <= 89){
         grade = "B. Nice Work!"
-    }else if (num >= 90){
+    } else if (num >= 90){
         grade = "A. Great Job!"
     } else { 
         grade = "F. Better luck next time..."
