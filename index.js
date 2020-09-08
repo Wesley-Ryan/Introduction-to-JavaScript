@@ -54,12 +54,60 @@ toDogYears(10)
 //Dog feeder 
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
 
+//take in weight of dog 
+function feedingRequirements(age, weight) {
+   let result = 0
+if (age >= 1 && weight <= 5) { 
+    result = 5 /100 * weight
+    console.log(`Your dog needs ${result} pounds of Dog Food.`)
+
+} if (age >= 1 && weight > 5 && weight <= 10) { 
+    result = 4 /100 * weight
+    console.log(`Your dog needs ${result} pounds of Dog Food.`)
+
+} if (age >= 1 && weight >= 11 && weight <= 15) { 
+    result = 3 /100 * weight
+    console.log(`Your dog needs ${result} pounds of Dog Food.`)
+
+} else if (age < 1 && weight <= 5) { 
+    result = 5 /100 * weight
+    console.log(`Your puppy needs ${result} pounds of Dog Food.`)
+
+} else if (age < 1 && weight > 5 && weight <= 10) { 
+    result = 4 /100 * weight
+    console.log(`Your puppy needs ${result} pounds of Dog Food.`)
+
+} else if (age < 1 && weight > 10 && weight <= 15) { 
+    result = 3 /100 * weight
+    console.log(`Your puppy needs ${result} pounds of Dog Food.`)
+
+} else { 
+    result = 2 /100 * weight
+    console.log(`Your puppy needs ${result} pounds of Dog Food.`)
+
+}
+
+}
+feedingRequirements(2,14)
+feedingRequirements(0,20)
+
+//check the age of the dog are they over 1? 
+
+// if yes then follow the feeding requirements of % 
+
 //feeding requirements
 // adult dogs at least 1 year 
 // up to 5 lbs - 5% of their body weight
 // 6 - 10 lbs - 4% of their body weight 
 // 11 - 15 lbs - 3% of their body weight 
 // > 15lbs - 2% of their body weight 
+
+
+
+//If they are less than a year old use Puppy feeding requirements.
+
+
+
 
 // Puppies less than 1 year
 // 2 - 4 months 10% of their body weight
@@ -69,7 +117,7 @@ toDogYears(10)
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
 
-
+feedingRequirements(1,15)
 
 
 /************************************************************** Task 4 **************************************************************/
@@ -79,8 +127,25 @@ toDogYears(10)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+  function rockPaperSissors(num) { 
+      let choices = ["rock", "paper", "sissors"]
+      let computerChoice = choices[[Math.floor(Math.random() * choices.length)]]
+      let userChoice = choices[num]
+      //console.log(choices[computerChoice])
+      //console.log(choices[num])
+     switch(userChoice, computerChoice) { 
+         case userChoice === computerChoice:
+             console.log(`It's a tie, you both chose ${userChoice}`)
+             break
+        
+     }
+
+
+  }
   
-  
+rockPaperSissors(2)
+
+
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
